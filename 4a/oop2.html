@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>nom</title>
+</head>
+<body>
+    <script>
+        const piet = {
+        leeftijd: 16,
+        geboortedatum: '01-28-2000',
+        telefoon: "06 34983850",
+        naam: "piet",
+        show: function(){
+            return [this.naam, this.leeftijd, this.telefoon];
+        }
+        };
+        console.log(piet); // Kijk in de console: welk object type? array
+        
+        piet.setleeftijd = function(geb_datum){
+            //bereken de leeftijd en pas leeftijd aan
+            this.geboortedatum = geb_datum;
+            const birthday = new Date(this.geboortedatum);
+            const agedif = Date.now() - birthday.getTime();
+            const agedate = new Date(agedif); // miliseconds from epoch
+            this.leeftijd = Math.abs(agedate.getUTCFullYear() - 1970);
+            };
+        piet.setleeftijd('03-18-1989');
+        console.log(piet.leeftijd); // Wat is het resultaat? 31
+        console.log(piet.show());
+        //nadeel ook maken masha is dat je een hele nieuwe const moet maken in plaats van functie met meegegeven gegevens
+    </script>
+</body>
+</html>

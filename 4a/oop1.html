@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>nom</title>
+</head>
+<body>
+
+
+    <script>
+        
+        console.log(window); // Geeft in de console?                                        de array window{}
+        console.log(window.origin); // Geeft het url. Wat is origin in het window object?   http://localhost:8888
+        
+        console.log(document); // Geeft in de console?                                      de html van de pagina
+        console.log(typeof document); // Geeft in de console?                               object
+        
+        const el = document.getElementsByTagName('body')[0];
+        console.log(el); // Geeft in de console?                                            geeft de body en script van de pagina
+        el.focus(); // Wat is focus() in het object dat in el zit?                          een function
+        
+        const d = new Date('03-17-1996'); // Wat doet new denk je?                          nieuw object
+        console.log(d); // Geeft in de console?                                             Sun Mar 17 1996 00:00:00 GMT+0100 (Midden-Europese standaardtijd)                                         
+        console.log(d.getFullYear()); // Welk data type?                                    number
+        
+        const s1 = "Dit is de eerste string";
+        const s2 = new String("Dit is de tweede string");
+        console.log(s1.length); // Hoe kan dit?                                             hij telt alle characters van het bestaande object.
+        console.log(s2.length); // Hoe kan dit?                                             hij telt alle characters. new string maakt nieuw object
+        
+        let arr1 = ['a', 'b', 'c'];
+        let arr2 = new Array('d', 'e', 'f');
+        console.log(arr1); // Geeft in de console?                                          de array ["a", "b", "c"]
+        console.log(arr2); // Geeft in de console?                                          de array ["d", "e", "f"]
+        console.log(arr1.length); // Wat is length dan voor iets?                           laat zien hoeveel elementen er in de array zitten
+        arr1.push('d'); // Wat is push dan?                                                 voegt een extra element toe aan de array
+        
+        function add(a, b) {return a + b};
+        console.log(add); // Wat is het resultaat?                                          laat de function zien: ƒ add(a, b) {return a + b}
+        console.log(add.prototype); // Resultaat? Onthoud prototype property!               hij laat de constructor zien: {constructor: ƒ}
+        console.log(add(3,4)); // Wat is het resultaat?                                     7
+</script>
+
+
+</body>
+</html>
